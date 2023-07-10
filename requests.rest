@@ -1,0 +1,84 @@
+GET http://localhost:3000/posts
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiS3J5cyIsImlhdCI6MTY4ODIzNTMwOCwiZXhwIjoxNjg4MjM1MzUzfQ.ycVvF29O_AR8UYn0gqYzCeKyPcaQqW42y32izQT58VA
+
+###
+
+POST http://localhost:4000/login
+Content-Type: application/json
+
+{
+    "username": "Krys"
+}
+
+###
+
+POST http://localhost:4000/token
+Content-Type: application/json
+
+{
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiS3J5cyIsImlhdCI6MTY4ODIzNjAzN30.ES98SSACiXbk-A56k13fsVXBJCj6-OArCIFoeTspEeY"
+}
+
+###
+
+POST http://localhost:4000/logout
+Content-Type: application/json
+
+{
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiS3J5cyIsImlhdCI6MTY4ODIzNjAzN30.ES98SSACiXbk-A56k13fsVXBJCj6-OArCIFoeTspEeY"
+}
+
+####
+GET http://localhost:4000/users
+
+
+####
+POST http://localhost:4000/users
+Content-Type: application/json
+
+{
+    "name" : "krys",
+    "password": "test123"
+}
+
+####
+POST http://localhost:4000/users/authenticate
+Content-Type: application/json
+
+{
+    "name" : "krys",
+    "password": "test123"
+}
+
+####
+GET http://localhost:4000/users/db/testconnection
+
+####
+GET http://localhost:4000/accounts/db/testconnection
+
+####
+GET http://localhost:4000/users/testconnection2
+Content-Type: application/json
+
+{
+    "username" : "krys",
+    "password": "test123"
+}
+
+####
+GET http://localhost:4000/users/user/2?name=ngabi&city=las Colinas
+
+####
+PUT http://localhost:4000/users/user/1
+
+####
+DELETE  http://localhost:4000/users/user/1
+
+####
+GET http://localhost:4000/users/user
+Content-Type: application/json
+
+{
+    "username" : "krys",
+    "password": "test123"
+}
